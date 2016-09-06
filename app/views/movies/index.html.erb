@@ -1,0 +1,10 @@
+<ul id="movies">
+  <%= render @movies %>
+</ul>
+
+<h3>Add a new movie</h3>
+<%= form_for :movie, remote: true do |form| %>
+  Title: <%= form.text_field :title %><br />
+  Description: <%= form.text_area :description %><br />
+  <%= form.submit %>
+<% end %>
